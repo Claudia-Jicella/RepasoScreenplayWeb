@@ -1,0 +1,6 @@
+projectKey=RepasoScreenplayWeb
+serverUrl=http://localhost:9000
+serverVersion=8.9.7.52159
+dashboardUrl=http://localhost:9000/dashboard?id=RepasoScreenplayWeb
+ceTaskId=AX8dLIBxbS-cf9e4L01Z
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AX8dLIBxbS-cf9e4L01Z
