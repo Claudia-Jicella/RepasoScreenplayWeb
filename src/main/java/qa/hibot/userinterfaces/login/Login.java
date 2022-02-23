@@ -4,7 +4,6 @@ import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
-import static org.openqa.selenium.By.id;
 
 public class Login extends PageObject {
     public static final Target INICIARSESION = Target
@@ -19,13 +18,16 @@ public class Login extends PageObject {
     public static final Target CONTRASENA = Target
             .the("Contraseña")
             .located(By.xpath("//*[@type='password' or @id='password']"));
+    public static final Target INGRESAR = Target
+            .the("Ingresar")
+            .located(By.xpath(".//div[@class=\"login padding-top-m\"]"));
 
 
     //Validaciones
 
     public static final Target NOVEDADES_APP_VALIDACION = Target
             .the("Novedades app")
-            .located(By.xpath(".//h1[text()=\"Novedades app\"]"));
+            .located(By.xpath(".//*[contains(@class,\"page-title\")]"));
 
 
 }
