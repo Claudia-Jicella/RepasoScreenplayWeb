@@ -12,5 +12,5 @@ import org.junit.runner.RunWith;
         tags = {"@Scenario1"}
 )
 
-public class iniciarsesion {
+public class IniciarSesion {
 }

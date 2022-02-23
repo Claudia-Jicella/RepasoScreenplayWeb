@@ -4,17 +4,21 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import qa.hibot.stepdefinitions.setup;
+import qa.hibot.stepdefinitions.Setup;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static qa.hibot.tasks.OpenLandingPage.openLandingPage;
+import static qa.hibot.tasks.iniciarsesion.BrowseToLogin.browseToLogin;
 
-public class iniciarsesionstepdefinition extends setup {
+public class IniciarSesionStepdefinition extends Setup {
+
+    private static final String ACTOR_NAME = "Claudia";
+
 
     //Background:
     @Given("que el cliente está en la página principal de hibot")
     public void que_el_cliente_esta_en_la_pagina_principal_de_hibot() {
-        actorSetuptheBrowser("Claudia");
+        actorSetuptheBrowser(ACTOR_NAME);
         theActorInTheSpotlight().attemptsTo(
                 openLandingPage()
         );
@@ -25,6 +29,10 @@ public class iniciarsesionstepdefinition extends setup {
     //Scenario1
     @When("el cliente navegue hasta el boton iniciar sesión y llena los siguentes datos")
     public void elClienteNavegueHastaElBotonIniciarSesionYLlenaLosSiguentesDatos(DataTable dataTable) {
+        theActorInTheSpotlight().attemptsTo(
+                browseToLogin()
+        );
+
 
     }
 

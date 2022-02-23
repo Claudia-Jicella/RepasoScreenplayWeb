@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 
-public class setup {
+public class Setup {
 
 
     @Managed

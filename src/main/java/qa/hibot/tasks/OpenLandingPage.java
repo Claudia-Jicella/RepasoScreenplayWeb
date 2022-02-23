@@ -3,20 +3,26 @@ package qa.hibot.tasks;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
+import net.serenitybdd.screenplay.actions.Open;
+import qa.hibot.userinterfaces.LandingPage;
 
 public class OpenLandingPage implements Task{
 
-    public OpenLandingPage() {
-    }
+    private LandingPage landingPage;
+
     @Override
     public <T extends Actor> void performAs(T actor) {
+        actor.attemptsTo(
+                Open.browserOn(landingPage)
+        );
 
     }
     public static OpenLandingPage openLandingPage(){
         return new OpenLandingPage();
 
 
-
     }
 
 }
+
+
